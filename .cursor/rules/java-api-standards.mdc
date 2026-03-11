@@ -1,0 +1,22 @@
+---
+description: Estándares Java y APIs REST para este proyecto
+globs: "**/*.java"
+alwaysApply: false
+---
+
+# Java y API — Convenciones
+
+## Java
+- Nombres: PascalCase clases, camelCase métodos/variables, UPPER_SNAKE constantes.
+- Paquetes: estructura por capa o por feature (ej. `com.app.api.controller`, `com.app.service`).
+- Preferir constructor injection para dependencias; evitar campos mutables innecesarios.
+- Excepciones: usar tipos específicos del dominio; no tragar excepciones.
+
+## REST
+- Controladores: solo delegar a servicios; respuestas tipadas (ResponseEntity + DTOs).
+- Códigos HTTP: 200/201 para éxito, 204 cuando no hay contenido que devolver, 400 validación, 404 no encontrado, 5xx solo errores de servidor.
+- Documentar endpoints con anotaciones o OpenAPI cuando exista en el proyecto.
+
+## Referencias
+- Ver AGENTS.md para instrucciones generales del agente.
+- Especificaciones de negocio/API en docs/spec/*.md.
