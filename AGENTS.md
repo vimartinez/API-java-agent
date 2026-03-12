@@ -13,18 +13,18 @@
 
 ## APIs REST
 - Diseño **RESTful**: recursos como sustantivos, verbos HTTP correctos, códigos de estado apropiados.
-- Versionado de API cuando sea necesario (path o header).
 - Contratos claros: DTOs/POJOs bien definidos, sin exponer entidades internas.
 - Validación en capa de entrada (Bean Validation, etc.) y mensajes de error consistentes.
 - Documentación de API: OpenAPI/Swagger cuando el proyecto lo use.
 
 ## Arquitectura y capas
 - Separar responsabilidades: controladores → servicios → repositorios/adapters.
-- Mantener lógica de negocio en la capa de servicio; controladores finos.
-- Tratamiento de errores centralizado (manejo de excepciones, mapeo a respuestas HTTP).
+- Mantener lógica de negocio en la capa de servicio.
 
 ## Especificaciones y documentación
-- Las especificaciones en `docs/spec/` (y otros `.md` referenciados) son la fuente de verdad para requisitos y diseño.
+- Las especificaciones de arquitectura expresas en `docs/spec/architecture.md`  son la fuente de verdad para arquitectura de la aplicación.
+- Las especificaciones de API expresas en `docs/spec/api-contract.md`  son la fuente de verdad para el contrato de la API.
+- Las especificaciones de requerimientos expresas en `docs/spec/requirements.md`  son la fuente de verdad para requisitos.
 - Respetar decisiones de diseño y convenciones definidas en esos documentos al generar o modificar código.
 
 ## Referencias útiles
